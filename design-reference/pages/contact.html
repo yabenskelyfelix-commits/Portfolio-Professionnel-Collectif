@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="fr" data-theme="light">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
   <title>Contact — Portfolio Professionnel</title>
-  <meta name="description" content="Contactez notre équipe via ce formulaire." />
-  <link rel="stylesheet" href="../css/variables.css" />
-  <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/layout.css" />
+  <meta name="description" content="Contactez notre équipe via ce formulaire." >
+  <link rel="stylesheet" href="../css/variables.css" >
+  <link rel="stylesheet" href="../css/reset.css" >
+  <link rel="stylesheet" href="../css/layout.css" >
 </head>
 <body>
   <a href="#main-content" class="skip-link">Aller au contenu principal</a>
@@ -53,7 +53,7 @@
             required
             aria-required="true"
             autocomplete="name"
-          />
+            placeholder="Ex : Dejean Frantz MERGILE">
           <span class="form-error" id="nom-error" role="alert" hidden>
             Le nom est requis.
           </span>
@@ -69,7 +69,7 @@
             aria-required="true"
             autocomplete="email"
             aria-describedby="email-error"
-          />
+            placeholder="exemple@courriel.com">
           <span class="form-error" id="email-error" role="alert" hidden>
             Veuillez entrer une adresse courriel valide.
           </span>
@@ -77,7 +77,7 @@
 
         <div class="form-field">
           <label for="sujet">Sujet</label>
-          <input type="text" id="sujet" name="sujet" autocomplete="off" />
+          <input type="text" id="sujet" name="sujet" autocomplete="off" placeholder="Ex : Proposition de collaboration">
         </div>
 
         <div class="form-field">
@@ -88,6 +88,7 @@
             rows="6"
             required
             aria-required="true"
+            placeholder="Ecrivez votre message ici..."
           ></textarea>
           <span class="form-error" id="message-error" role="alert" hidden>
             Le message ne peut pas être vide.
