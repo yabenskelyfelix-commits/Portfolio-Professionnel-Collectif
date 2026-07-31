@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
+    "dev": "vite",
     "build": "vite build"
   },
   "repository": {
@@ -20,6 +21,11 @@
   },
   "homepage": "https://github.com/yabenskelyfelix-commits/Portfolio-Professionnel-Collectif#readme",
   "dependencies": {
-    "express": "^5.2.1"
+    "@vitejs/plugin-react": "^6.0.4",
+    "express": "^5.2.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "react-router-dom": "^6.30.4",
+    "vite": "^8.1.5"
   }
 }
