@@ -1,0 +1,110 @@
+/* ==========================================================================
+   VARIABLES.CSS
+   Charte graphique — Portfolio Professionnel Dynamique Full-Stack
+   Tâche 1 : Intégration Sémantique, Charte Visuelle et Accessibilité
+   ==========================================================================
+   Convention de nommage à respecter par toute l'équipe (Tâche 2 - React) :
+   - Couleurs      : --color-*
+   - Typographie   : --font-*
+   - Espacements   : --space-*
+   - Rayons/ombres : --radius-*, --shadow-*
+   - Breakpoints   : gérés en CSS (pas de variable, media queries directes)
+   ========================================================================== */
+
+:root {
+  /* ---- MODE CLAIR (par défaut) ---- */
+  --color-bg: #ffffff;
+  --color-bg-alt: #f4f6f8;
+  --color-surface: #ffffff;
+  --color-text: #1a1d21;
+  --color-text-muted: #5a6270;
+  --color-border: #e1e4e8;
+
+  --color-primary: #2563eb;      /* Bleu principal */
+  --color-primary-hover: #1d4ed8;
+  --color-secondary: #7c3aed;    /* Violet secondaire */
+  --color-accent: #f59e0b;       /* Accent (badges, highlights) */
+
+  --color-success: #16a34a;
+  --color-error: #dc2626;
+  --color-focus: #2563eb;        /* Contour de focus clavier (accessibilité) */
+
+  /* ---- Typographie ---- */
+  --font-family-base: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-family-heading: 'Segoe UI', Roboto, sans-serif;
+
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-md: 1.125rem;
+  --font-size-lg: 1.5rem;
+  --font-size-xl: 2rem;
+  --font-size-xxl: 2.75rem;
+
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-bold: 700;
+
+  --line-height-base: 1.6;
+  --line-height-heading: 1.2;
+
+  /* ---- Espacements (échelle 8px) ---- */
+  --space-xs: 0.25rem;   /* 4px */
+  --space-sm: 0.5rem;    /* 8px */
+  --space-md: 1rem;      /* 16px */
+  --space-lg: 1.5rem;    /* 24px */
+  --space-xl: 2.5rem;    /* 40px */
+  --space-xxl: 4rem;     /* 64px */
+
+  /* ---- Rayons et ombres ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.10);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+  /* ---- Transition thème ---- */
+  --transition-theme: background-color 0.25s ease, color 0.25s ease,
+    border-color 0.25s ease;
+
+  /* ---- Largeur max de contenu ---- */
+  --container-max: 1200px;
+}
+
+/* ==========================================================================
+   MODE SOMBRE
+   Activé via l'attribut data-theme="dark" posé sur <html> par le Context API
+   (géré côté React — Tâche 2/3). Ces variables sont la "source de vérité"
+   pour la bascule claire/sombre.
+   ========================================================================== */
+[data-theme='dark'] {
+  --color-bg: #14161a;
+  --color-bg-alt: #1c1f24;
+  --color-surface: #202329;
+  --color-text: #f1f3f5;
+  --color-text-muted: #a8adb5;
+  --color-border: #33373e;
+
+  --color-primary: #5b8def;
+  --color-primary-hover: #7ba3f2;
+  --color-secondary: #a78bfa;
+  --color-accent: #fbbf24;
+
+  --color-success: #4ade80;
+  --color-error: #f87171;
+  --color-focus: #5b8def;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.45);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+/* ==========================================================================
+   Respect des préférences système si l'utilisateur n'a pas encore choisi
+   (fallback avant hydratation du Context API)
+   ========================================================================== */
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+  }
+}

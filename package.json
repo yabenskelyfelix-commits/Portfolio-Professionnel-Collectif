@@ -1,0 +1,25 @@
+{
+  "name": "portfolio-professionnel-collectif",
+  "version": "1.0.0",
+  "description": "Ce repo servira à héberger le code de notre projet portfolio collaboratif pour le cours LOG3500 (ISTEAH).",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "build": "vite build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yabenskelyfelix-commits/Portfolio-Professionnel-Collectif.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/yabenskelyfelix-commits/Portfolio-Professionnel-Collectif/issues"
+  },
+  "homepage": "https://github.com/yabenskelyfelix-commits/Portfolio-Professionnel-Collectif#readme",
+  "dependencies": {
+    "express": "^5.2.1"
+  }
+}

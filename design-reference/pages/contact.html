@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Contact — Portfolio Professionnel</title>
+  <meta name="description" content="Contactez notre équipe via ce formulaire." >
+  <link rel="stylesheet" href="../css/variables.css" >
+  <link rel="stylesheet" href="../css/reset.css" >
+  <link rel="stylesheet" href="../css/layout.css" >
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" aria-label="Retour à l'accueil du portfolio">
+        <strong>Équipe&nbsp;Portfolio</strong>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="main-nav__list">
+          <li><a href="/" class="main-nav__link">Accueil</a></li>
+          <li><a href="/equipe" class="main-nav__link">Équipe</a></li>
+          <li><a href="/projets" class="main-nav__link">Projets</a></li>
+          <li><a href="/contact" class="main-nav__link" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Activer le mode sombre">
+        🌙 <span>Mode sombre</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-layout">
+    <section class="page-section container" aria-labelledby="contact-title">
+      <h1 id="contact-title" class="page-section__title">Contactez-nous</h1>
+
+      <!--
+        NOTE POUR LA TÂCHE 2 (React) :
+        Ce formulaire doit être converti en composant contrôlé (useState par champ).
+        NOTE POUR LA TÂCHE 3 (Express) :
+        La soumission POST doit aller vers /api/contact.
+        Le résultat (succès/erreur) s'affiche dans #form-status
+        SANS rechargement de page (fetch + affichage asynchrone).
+      -->
+      <form class="contact-form" novalidate aria-describedby="form-status">
+        <div class="form-field">
+          <label for="nom">Nom complet <span aria-hidden="true">*</span></label>
+          <input
+            type="text"
+            id="nom"
+            name="nom"
+            required
+            aria-required="true"
+            autocomplete="name"
+            placeholder="Ex : Dejean Frantz MERGILE">
+          <span class="form-error" id="nom-error" role="alert" hidden>
+            Le nom est requis.
+          </span>
+        </div>
+
+        <div class="form-field">
+          <label for="email">Adresse courriel <span aria-hidden="true">*</span></label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+            autocomplete="email"
+            aria-describedby="email-error"
+            placeholder="exemple@courriel.com">
+          <span class="form-error" id="email-error" role="alert" hidden>
+            Veuillez entrer une adresse courriel valide.
+          </span>
+        </div>
+
+        <div class="form-field">
+          <label for="sujet">Sujet</label>
+          <input type="text" id="sujet" name="sujet" autocomplete="off" placeholder="Ex : Proposition de collaboration">
+        </div>
+
+        <div class="form-field">
+          <label for="message">Message <span aria-hidden="true">*</span></label>
+          <textarea
+            id="message"
+            name="message"
+            rows="6"
+            required
+            aria-required="true"
+            placeholder="Ecrivez votre message ici..."
+          ></textarea>
+          <span class="form-error" id="message-error" role="alert" hidden>
+            Le message ne peut pas être vide.
+          </span>
+        </div>
+
+        <button type="submit" class="btn btn--primary">Envoyer le message</button>
+
+        <!-- Zone de statut asynchrone : aria-live pour annoncer aux lecteurs d'écran -->
+        <p
+          id="form-status"
+          class="form-status"
+          role="status"
+          aria-live="polite"
+        ></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <nav aria-label="Liens du pied de page">
+        <ul class="site-footer__links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/equipe">Équipe</a></li>
+          <li><a href="/projets">Projets</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Équipe Portfolio — LOG3500, ISTEAH. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>

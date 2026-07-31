@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr" data-theme="light">
+<head>
+  <meta charset="UTF-8" >
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+  <title>Notre Équipe — Portfolio Professionnel</title>
+  <meta name="description" content="Découvrez les membres de l'équipe, leurs rôles et leurs compétences." >
+  <link rel="stylesheet" href="../css/variables.css" >
+  <link rel="stylesheet" href="../css/reset.css" >
+  <link rel="stylesheet" href="../css/layout.css" >
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Aller au contenu principal</a>
+
+  <header class="site-header">
+    <div class="container site-header__inner">
+      <a href="/" aria-label="Retour à l'accueil du portfolio">
+        <strong>Équipe&nbsp;Portfolio</strong>
+      </a>
+      <nav class="main-nav" aria-label="Navigation principale">
+        <ul class="main-nav__list">
+          <li><a href="/" class="main-nav__link">Accueil</a></li>
+          <li><a href="/equipe" class="main-nav__link" aria-current="page">Équipe</a></li>
+          <li><a href="/projets" class="main-nav__link">Projets</a></li>
+          <li><a href="/contact" class="main-nav__link">Contact</a></li>
+        </ul>
+      </nav>
+      <button type="button" class="theme-toggle" aria-pressed="false" aria-label="Activer le mode sombre">
+        🌙 <span>Mode sombre</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main-content" class="main-layout">
+    <section class="page-section container" aria-labelledby="equipe-title">
+      <h1 id="equipe-title" class="page-section__title">Notre Équipe</h1>
+
+      <div class="team-grid">
+        <!-- Membre 1 -->
+        <article class="team-card">
+          <img
+            class="team-card__photo"
+            src="/assets/dejean-frantz-mergile.jpg"
+            alt="Photo de profil de Dejean Frantz MERGILE"
+            width="120"
+            height="120">
+          <h2>Dejean Frantz MERGILE</h2>
+          <p><strong>Rôle :</strong> Intégration Sémantique, Charte Visuelle et Accessibilité</p>
+          <p>
+            Responsable de la structure HTML5, du design responsive et de la
+            conformité aux normes d'accessibilité numérique.
+          </p>
+        </article>
+
+        <!-- Membre 2 -->
+        <article class="team-card">
+          <img
+            class="team-card__photo"
+            src="/assets/edma-sarai-lorca.jpg"
+            alt="Photo de profil de Edma Sarai LORCA"
+            width="120"
+            height="120">
+          <h2>Edma Sarai LORCA</h2>
+          <p><strong>Rôle :</strong> Architecture Client, Composants et Routage React</p>
+          <p>
+            Responsable de l'initialisation Vite, des composants React et
+            de la configuration de React Router v6.
+          </p>
+        </article>
+
+        <!-- Membre 3 -->
+        <article class="team-card">
+          <img
+            class="team-card__photo"
+            src="/assets/yabens-kelly-felix.jpg"
+            alt="Photo de profil de Yabens Kelly FELIX"
+            width="120"
+            height="120">
+          <h2>Yabens Kelly FELIX</h2>
+          <p><strong>Rôle :</strong> Développement Serveur, Interconnexion API et DevOps</p>
+          <p>
+            Responsable du serveur Express, des routes API et du déploiement
+            continu sur Railway.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container site-footer__inner">
+      <nav aria-label="Liens du pied de page">
+        <ul class="site-footer__links">
+          <li><a href="/">Accueil</a></li>
+          <li><a href="/equipe">Équipe</a></li>
+          <li><a href="/projets">Projets</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+      <p>&copy; 2026 Équipe Portfolio — LOG3500, ISTEAH. Tous droits réservés.</p>
+    </div>
+  </footer>
+</body>
+</html>
