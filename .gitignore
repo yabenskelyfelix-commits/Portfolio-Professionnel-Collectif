@@ -12,6 +12,9 @@ yarn-error.log*
 tmp/
 *.tmp
 
+# Messages du formulaire de contact (générés à l'exécution)
+messages.json
+
 # Build / distribution
 dist/
 build/
